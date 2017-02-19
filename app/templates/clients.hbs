@@ -4,10 +4,15 @@
       <h1>Clients</h1>
       <ul class="nav nav-pills">
         {{#each model as |client|}}
-        <li role="presentation">{{#link-to "clients"}}{{client.name}}{{/link-to}}</li>
+        {{#link-to "clients.show" client.id tagName="li"}}
+          <a href="/clients/{{client.id}}">{{client.name}}</a>
+        {{/link-to}}
         {{/each}}
+        <li>{{link-to "Add new" "clients.new"}}</li>
       </ul>
+      <div class="well">
       {{outlet}}
+      </div>
     </div>
   </div>
 </div>
