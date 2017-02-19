@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Clients</h1>
+      <ul class="nav nav-pills">
+        {{#each model as |client|}}
+        <li role="presentation">{{#link-to "clients"}}{{client.name}}{{/link-to}}</li>
+        {{/each}}
+      </ul>
+      {{outlet}}
+    </div>
+  </div>
+</div>
