@@ -1,5 +1,6 @@
 <p>id: {{model.id}}</p>
 <p>Name: {{model.name}}</p>
+<p>{{link-to "Projects" "clients.show.projects" model.id}}</p>
 {{outlet}}
 
 <button class="btn" {{action 'edit'}}>Edit</button>
